@@ -53,7 +53,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine($"Zodyje yra {Console.ReadLine().Count()} raides");
 
             //Skaiciuotuvas, kuris atlieka veiksmus tik su vienazenkliais skaiciais
-            Console.WriteLine();
+            Console.WriteLine("SKAICIUOTUVAS: ivedate du skaicius, su jais atlika veiksmus");
+            Console.WriteLine(" SUMA: {0}",((int)Console.ReadKey().KeyChar - 48) + ((int)Console.ReadKey().KeyChar - 48));
+            Console.WriteLine(" ATIMTIS: {0}", ((int)Console.ReadKey().KeyChar - 48) - ((int)Console.ReadKey().KeyChar - 48));
+            Console.WriteLine(" DAUGYBA: {0}", ((int)Console.ReadKey().KeyChar - 48) * ((int)Console.ReadKey().KeyChar - 48));
+            Console.WriteLine(" DALYBA: {0}", ((int)Console.ReadKey().KeyChar - 48) / ((int)Console.ReadKey().KeyChar - 48));
         }
 
     }
