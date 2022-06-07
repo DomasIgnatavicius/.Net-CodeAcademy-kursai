@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "Basics\Basics.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console uzduotys", "Console uzduotys\Console uzduotys.csproj", "{24FD6ED2-4CEB-481A-8480-890A590B3CED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringKintamiji", "StringKintamiji\StringKintamiji.csproj", "{FC6280CD-8334-4016-B9E1-E1B123D20AAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{24FD6ED2-4CEB-481A-8480-890A590B3CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24FD6ED2-4CEB-481A-8480-890A590B3CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24FD6ED2-4CEB-481A-8480-890A590B3CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6280CD-8334-4016-B9E1-E1B123D20AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6280CD-8334-4016-B9E1-E1B123D20AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6280CD-8334-4016-B9E1-E1B123D20AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6280CD-8334-4016-B9E1-E1B123D20AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
