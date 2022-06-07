@@ -40,7 +40,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
             */
 
             //LABAS su dideliais tarpain
-                //Console.WriteLine("L\tA\tB\tA\tS");
+            //Console.WriteLine("L\tA\tB\tA\tS");
+            //LABAS kabutese
+            //Console.WriteLine("\"LABAS\"");
+
+            //isvesti zodi, nuskaityti ir isvesti antra zodzio raide
+            //Console.WriteLine("Iveskite savo varda:");
+            //Console.WriteLine($"Antra raide yra: {Console.ReadLine()[1]}");
+
+            //ivesti varda, nuskaito ir isveda raidziu kieki
+            //Console.WriteLine("Iveskite varda: ");
+            //Console.WriteLine($"Zodyje yra {Console.ReadLine().Count()} raides");
+
+            //Skaiciuotuvas, kuris atlieka veiksmus tik su vienazenkliais skaiciais
+            Console.WriteLine();
         }
 
     }
