@@ -89,7 +89,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             //4.
             // Į kiekvieno stulpelio 5eil įdėkite po 4 dalių elementą ir išveskite Tower of Hanoi
-            Console.WriteLine("TUSCIAS TOWERIS");
+            Console.WriteLine("Į kiekvieno stulpelio 5eil įdėkite po 4 dalių elementą ir išveskite Tower of Hanoi");
             Console.WriteLine();
 
             Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
@@ -104,14 +104,53 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             //5.
             // Į 1stulp 5eil įdėkite 4 dalių elementą, 2sutup 5eil - 3 dalių, 3sutup 4eil - 1 dalies, 3sutup 5eil - 2 dalių, ir išveskite Tower of Hanoi
-            Console.WriteLine("TUSCIAS TOWERIS");
+            Console.WriteLine("Į 1stulp 5eil įdėkite 4 dalių elementą, 2sutup 5eil - 3 dalių, 3sutup 4eil - 1 dalies, 3sutup 5eil - 2 dalių, ir išveskite Tower of Hanoi");
             Console.WriteLine();
 
             Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
             Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
             Console.WriteLine($"      {stulpelis}            {stulpelis}           {vienas}");
-            Console.WriteLine($"      {stulpelis}            {stulpelis}           {stulpelis}");
             Console.WriteLine($"  {keturi}     {trys}       {du}");
+            Console.WriteLine("----1stulp-------2stulp-------3stulp----");
+
+            Console.ReadKey();
+            Console.WriteLine();
+
+            //6.
+            // Į 1stulp 4eil įdėkite tokį pat elementą kaip yra 3stup 4eil, ir išveskite Tower of Hanoi
+            Console.WriteLine("Į 1stulp 4eil įdėkite tokį pat elementą kaip yra 3stup 4eil, ir išveskite Tower of Hanoi");
+            Console.WriteLine();
+
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"     {vienas}           {stulpelis}           {vienas}");
+            Console.WriteLine($"  {keturi}     {trys}       {du}");
+            Console.WriteLine("----1stulp-------2stulp-------3stulp----");
+
+            //7.
+            // Į visas 2stulp eilutes įdėkite tokį pat elementą kaip yra 3stup 5eil, ir išveskite Tower of Hanoi
+            Console.WriteLine("Į visas 2stulp eilutes įdėkite tokį pat elementą kaip yra 3stup 5eil, ir išveskite Tower of Hanoi");
+            Console.WriteLine();
+
+            Console.WriteLine($"      {stulpelis}          {du}          {stulpelis}");
+            Console.WriteLine($"      {stulpelis}          {du}          {stulpelis}");
+            Console.WriteLine($"      {stulpelis}          {du}          {stulpelis}");
+            Console.WriteLine($"     {vienas}         {du}         {vienas}");
+            Console.WriteLine($"  {keturi}      {du}        {du}");
+            Console.WriteLine("----1stulp-------2stulp-------3stulp----");
+
+            //8.
+            // į 3stulp sudėkite teisingą piramidę. 1stulp ir 2 stulp turi likti tušti, išveskite Tower of Hanoi
+            Console.WriteLine("į 3stulp sudėkite teisingą piramidę. 1stulp ir 2 stulp turi likti tušti, išveskite Tower of Hanoi");
+            Console.WriteLine();
+
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}           {vienas}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}          {du}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}         {trys}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}        {keturi}");
             Console.WriteLine("----1stulp-------2stulp-------3stulp----");
         }
 
