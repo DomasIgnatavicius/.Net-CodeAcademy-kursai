@@ -6,12 +6,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+            teorineDalis();
+        }
+        static void teorineDalis()
+        {
             string hello = "Hello";
             string world = " World!";
 
             string tuscias = "";
             string nulas = null;
             string laisvaerdve = "";
+
+            string raideA = "AAAAAAAAAAAA";
+            string raideB = raideA.Replace("A", "B"); // replace kabutese rasom pirma is ko keiciam(is A) ir tada i ka keiciam(i B)
 
             //Galima naudoti tuos pacius tris su visais string kintamaisiai
 
@@ -23,8 +30,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             string interpoliacija = $"{hello}{world}";
             Console.WriteLine(interpoliacija);
-            
 
+            Console.WriteLine(raideB);
         }
 
     }
