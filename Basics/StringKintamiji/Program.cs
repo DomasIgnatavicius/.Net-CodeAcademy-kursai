@@ -152,6 +152,37 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine($"      {stulpelis}            {stulpelis}         {trys}");
             Console.WriteLine($"      {stulpelis}            {stulpelis}        {keturi}");
             Console.WriteLine("----1stulp-------2stulp-------3stulp----");
+
+            //9.
+            // pakeiskite visų elementų dizainą iš # į " , išveskite Tower of Hanoi
+            Console.WriteLine("pakeiskite visų elementų dizainą iš # į \", išveskite Tower of Hanoi");
+            Console.WriteLine();
+
+            Console.WriteLine($"      {stulpelis}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}           {vienas.Replace("#", "\"")}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}          {du.Replace("#", "\"")}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}         {trys.Replace("#", "\"")}");
+            Console.WriteLine($"      {stulpelis}            {stulpelis}        {keturi.Replace("#", "\"")}");
+            Console.WriteLine("----1stulp-------2stulp-------3stulp----");
+
+            //10.
+            // paprašykite naudotojo nupiešti 1 sulpelio 1 eilutę. Išveskite visą Tower of Hanoi su perpiešta pirma eilute
+            Console.WriteLine("paprašykite naudotojo nupiešti 1 sulpelio 1 eilutę. Išveskite visą Tower of Hanoi su perpiešta pirma eilute");
+            Console.WriteLine();
+
+            string zmogausEilute;
+
+            Console.WriteLine("NUPIESKITE 1STULP 1EIL: ");
+            zmogausEilute = Console.ReadLine();
+
+            Console.WriteLine();
+
+            Console.WriteLine($"      {zmogausEilute}            {stulpelis}            {stulpelis}");
+            Console.WriteLine($"     {vienas}           {stulpelis}           {vienas.Replace("#", "\"")}");
+            Console.WriteLine($"    {du}          {stulpelis}          {du.Replace("#", "\"")}");
+            Console.WriteLine($"   {trys}         {stulpelis}         {trys.Replace("#", "\"")}");
+            Console.WriteLine($"  {keturi}        {stulpelis}        {keturi.Replace("#", "\"")}");
+            Console.WriteLine("----1stulp-------2stulp-------3stulp----");
         }
 
     }
