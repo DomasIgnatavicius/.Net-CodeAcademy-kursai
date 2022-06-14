@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Basics", "Basics\01.Basics.csproj", "{CC3D5988-1051-4D36-BFB9-24C428384FCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P001.Basics", "Basics\P001.Basics.csproj", "{CC3D5988-1051-4D36-BFB9-24C428384FCA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Console uzduotys", "Console uzduotys\02.Console uzduotys.csproj", "{24FD6ED2-4CEB-481A-8480-890A590B3CED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P002.Console uzduotys", "Console uzduotys\P002.Console uzduotys.csproj", "{24FD6ED2-4CEB-481A-8480-890A590B3CED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.StringKintamiji", "StringKintamiji\03.StringKintamiji.csproj", "{FC6280CD-8334-4016-B9E1-E1B123D20AAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P003.StringKintamiji", "StringKintamiji\P003.StringKintamiji.csproj", "{FC6280CD-8334-4016-B9E1-E1B123D20AAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Kintamieji", "Kintamieji\04.Kintamieji.csproj", "{4BD9F6D7-71CB-423B-8F84-56E4C47828D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P004.Kintamieji", "Kintamieji\P004.Kintamieji.csproj", "{4BD9F6D7-71CB-423B-8F84-56E4C47828D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Matematiniai operatoriai", "Matematiniai operatoriai\06.Matematiniai operatoriai.csproj", "{4F2D6AA7-94AF-40E2-8052-0D97C1527FA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P006.Matematiniai operatoriai", "Matematiniai operatoriai\P006.Matematiniai operatoriai.csproj", "{4F2D6AA7-94AF-40E2-8052-0D97C1527FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Tipu Konversijos", "05. Tipu Konversijos\05. Tipu Konversijos.csproj", "{72D2EA42-1457-47C2-B04D-3C0C8E75DB1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P005. Tipu Konversijos", "05. Tipu Konversijos\P005. Tipu Konversijos.csproj", "{72D2EA42-1457-47C2-B04D-3C0C8E75DB1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Operatoriai", "07. Operatoriai\07. Operatoriai.csproj", "{776DE486-683F-4D9D-9535-0F3287BEA2C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P007. Operatoriai", "07. Operatoriai\P007. Operatoriai.csproj", "{776DE486-683F-4D9D-9535-0F3287BEA2C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
