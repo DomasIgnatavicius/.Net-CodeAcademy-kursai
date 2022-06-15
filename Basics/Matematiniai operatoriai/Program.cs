@@ -1,7 +1,7 @@
 ﻿using System.Text;
 
 
-teorija();
+uzduotis3IsvedamSakiciuPenkisKartus();
 
 
 
@@ -137,4 +137,72 @@ void uzduotys()
       - iš rezultato atimkite maksimalų long skaičių
       - ir pridėkite maksimalų int skaičių
      */
+}
+
+void uzduotys2()
+{
+    /*PARASYKITE PROGRAMA KURI DIDELI 10 ZENKLI SK DUOBLE, KONVERTUOJA I INT, SHORT, BYTE*/
+    double skaicius = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine($"INT: {(int)skaicius}"); // uzduotis skirta tam kad primintu,
+                                                // kad is didesio i mazesni castint labia pavojinga,
+                                                // nes kompiuteris nebenoka skaiciuoti ir geriau naudoti convert,
+                                                // tada programa tiesiog luzta
+
+    Console.WriteLine("---------------------------------------------------");
+
+    /*PROGRAMA PRASO IVESTI SPINDULI
+     APSKAICIUOJA PLOTA IR TURI
+    plotas: 4pir^2
+    turis: 4/3pi r
+    */
+
+    //var spindulys = double.Parse(Console.ReadLine());
+
+
+    //nuskaityti du skaicius x ir y
+    //isvesti i ekrana y+2y+x+1 ir apskaiciuoti rezultata
+
+    double x;
+    double y;
+
+    Console.WriteLine($"Iveskite x: {x = double.Parse(Console.ReadLine())}");
+    Console.WriteLine($"Iveskite x: {y = double.Parse(Console.ReadLine())}");
+    double rezultatas = y + (2 * y) + x + 1;
+    Console.WriteLine($"{y} + 2 * {y} + {x} + 1 = {rezultatas}");
+
+    // y+x/2
+
+    Console.WriteLine($"Iveskite x: {x = double.Parse(Console.ReadLine())}");
+    Console.WriteLine($"Iveskite x: {y = double.Parse(Console.ReadLine())}");
+
+    rezultatas = y + x / 2;
+    Console.WriteLine($"{y} + {x} / 2 = {rezultatas}");
+
+}
+
+void uzduotis2KeiviamVienetusNuliais()
+{
+    // IVEDAMAS SKAICIUS VISI 1 KEICIAMI I 0 IR PADALINTI IS 2
+    Console.WriteLine("Iveskite bet koki skaiciu");
+    var skaicius = Convert.ToDouble(Console.ReadLine().Replace("1", "0"));
+    Console.WriteLine($"{skaicius} / 2 = {skaicius / 2}");
+}
+
+void uzduotis3IsvedamSakiciuPenkisKartus()
+{
+    // NAUDOTOJAS IVEDA SVEIKA SKAICIU, IVEDAME VIENOJE EILUTEJE 5 KARTUS VIS PADIDINDAMI VIENETU
+    Console.WriteLine("Iveskite sveikaji skaiciu");
+    int skaicius = Convert.ToInt32(Console.ReadLine()) + 1;
+    Console.WriteLine();
+    Console.WriteLine($"{skaicius++} {skaicius++} {skaicius++} {skaicius++} {skaicius++}");
+    //ARBA
+    Console.WriteLine("Iveskite sveikaji skaiciu");
+    int skaicius2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine();
+    Console.WriteLine($"{++skaicius2} {++skaicius2} {++skaicius2} {++skaicius2} {++skaicius2}");
+    //siuo atveju pirma yra padidinama reiksme ir tik tada isvedamas skaicius2 i ekrana,
+    //todel nereikia inicializuojant prideti 1
+    //taip veikai nes kompiliatorius skaito ir kaires i desine pirma perskaito ++ ir tada isveda skaicius2 i ekrana
+    //EILISKUMAS SVARBU
+
 }
