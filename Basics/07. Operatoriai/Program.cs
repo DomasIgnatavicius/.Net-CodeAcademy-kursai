@@ -1,4 +1,4 @@
-﻿loginiaiOperatoriaiTeorija();
+﻿loginiaiUzduotis2();
 
 void teorija()
 {
@@ -94,5 +94,28 @@ void loginiaiOperatoriaiTeorija()
     Console.WriteLine($"melas NXOR tiesa  {!(melas ^ tiesa)}");
     Console.WriteLine($"melas NXOR melas  {!melas ^ !melas}");
     Console.WriteLine();
+    Console.WriteLine("---------------------------------------------------------");
+    Console.WriteLine();
+
+    int a = 5;
+    int b = 5;
+    int c = 6;
+    bool s = a >= b && a > c;
+    Console.WriteLine(s);
 }
 
+// Loginiai operatoriai UZDUOTYS
+
+void loginiaiUzduotis1()
+{
+    //PRASO IVESTI DU SKAICIUS, JIE LYGUS ISVEDA TRUE, JEI NE ISVEDA FALSE
+    Console.WriteLine("iveskite du skaicius");
+    double a = Convert.ToDouble(Console.ReadLine());
+    double b = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine($"Ar skaiciai lygus?: {a == b}");
+}
+
+void loginiaiUzduotis2()
+{
+    //PRASO IVESTI DU SKAICIUS, JIE LYGUS ISVEDA TRUE, JEI NE ISVEDA FALSE
+}
