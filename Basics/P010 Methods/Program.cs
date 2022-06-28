@@ -2,9 +2,16 @@
 {
     internal class Program
     {
+        public static string textas = "";
+
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello, Methods!");
+
+            Console.WriteLine("Iveskite texta");
+            textas = Console.ReadLine();
+            IsveskiTextaIEkrana();
+
             Console.WriteLine("Sukuriame pirma savo metoda");
 
             IsveskKazkaEkranan();//metodo kvietimas. kai metodas nieko negrąžina ir nieko nepriima
@@ -80,6 +87,11 @@
             {
                 return a + b;
             }
+        }
+
+        private static void IsveskiTextaIEkrana()
+        {
+            Console.WriteLine($"Ivestas tekstas yra: {textas}");
         }
 
 
