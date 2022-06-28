@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P005. Tipu Konversijos", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P007. Operatoriai", "07. Operatoriai\P007. Operatoriai.csproj", "{776DE486-683F-4D9D-9535-0F3287BEA2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P008 If ir Switch", "P008 If ir Switch\P008 If ir Switch.csproj", "{B53A109E-FE40-45E5-A13A-FC87BB863B26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P008 If ir Switch", "P008 If ir Switch\P008 If ir Switch.csproj", "{B53A109E-FE40-45E5-A13A-FC87BB863B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P009 String Manipulation", "P009 String Manipulation\P009 String Manipulation.csproj", "{26D0B1C4-6EEB-448D-B662-7CD1F33B0598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B53A109E-FE40-45E5-A13A-FC87BB863B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53A109E-FE40-45E5-A13A-FC87BB863B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B53A109E-FE40-45E5-A13A-FC87BB863B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D0B1C4-6EEB-448D-B662-7CD1F33B0598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D0B1C4-6EEB-448D-B662-7CD1F33B0598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D0B1C4-6EEB-448D-B662-7CD1F33B0598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D0B1C4-6EEB-448D-B662-7CD1F33B0598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
