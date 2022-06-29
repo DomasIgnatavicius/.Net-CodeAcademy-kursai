@@ -25,7 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P010 Methods", "P010 Method
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0000 Playgrounds", "0000 Playgrounds\0000 Playgrounds.csproj", "{910E19F2-D35E-4ABF-8C4E-BA1C3B0E4D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P010 Methods Uzduotys", "P010 Methods Uzduotys\P010 Methods Uzduotys.csproj", "{53898E30-5F08-4545-B743-4FD4B4096A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P010 Methods Uzduotys", "P010 Methods Uzduotys\P010 Methods Uzduotys.csproj", "{53898E30-5F08-4545-B743-4FD4B4096A5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2CC7284C-01AD-487F-82A8-A983C3FC98B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P010 Methonds test", "P010 Methonds test\P010 Methonds test.csproj", "{4A4AEE0A-881F-457C-99EE-9F3BA8316069}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,9 +85,16 @@ Global
 		{53898E30-5F08-4545-B743-4FD4B4096A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53898E30-5F08-4545-B743-4FD4B4096A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53898E30-5F08-4545-B743-4FD4B4096A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A4AEE0A-881F-457C-99EE-9F3BA8316069} = {2CC7284C-01AD-487F-82A8-A983C3FC98B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9BDFDDA-D696-4EF6-A32C-4D49EAEA1B0C}

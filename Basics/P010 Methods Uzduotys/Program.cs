@@ -1,6 +1,6 @@
 ﻿namespace P010_Methods_Uzduotys
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

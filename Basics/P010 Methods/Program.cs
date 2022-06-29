@@ -1,6 +1,6 @@
 ﻿namespace P010_Methods
 {
-    internal class Program
+    public class Program
     {
         public static string textas = "";
 
