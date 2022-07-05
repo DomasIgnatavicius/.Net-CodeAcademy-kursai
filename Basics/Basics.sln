@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P010 Methods Uzduotys", "P0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2CC7284C-01AD-487F-82A8-A983C3FC98B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P010 Methonds test", "P010 Methonds test\P010 Methonds test.csproj", "{4A4AEE0A-881F-457C-99EE-9F3BA8316069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P010 Methonds test", "P010 Methonds test\P010 Methonds test.csproj", "{4A4AEE0A-881F-457C-99EE-9F3BA8316069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P011 Debuginimas", "P011 Debuginimas\P011 Debuginimas.csproj", "{B4E4497A-DA0E-4A21-9647-BBB81061202A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4AEE0A-881F-457C-99EE-9F3BA8316069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E4497A-DA0E-4A21-9647-BBB81061202A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E4497A-DA0E-4A21-9647-BBB81061202A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E4497A-DA0E-4A21-9647-BBB81061202A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E4497A-DA0E-4A21-9647-BBB81061202A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

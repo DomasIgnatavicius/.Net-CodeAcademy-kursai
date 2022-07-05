@@ -1,11 +1,13 @@
-﻿namespace P010_Methods_Uzduotys
+﻿using System.Text.RegularExpressions;
+
+namespace P010_Methods_Uzduotys
 {
     public class Program
     {
         static void Main(string[] args)
         {
 
-            uzduotis4();
+            namuDarbas();
 
             
         }
@@ -80,6 +82,64 @@
             Console.WriteLine($"Tarpu priekyje yra {tarpaiPriekyje}, tarpu gale yra {tarpaiGale}");
         }
 
+        public static void namuDarbas()
+        {
+            /*Namu darbo užduotis būtuL
+            UŽDUOTIS 11A (sunkense) + testai
+
+             Parašykite programą kurioje vienas metodas. 
+                - Naudotojo paprašome įvesti betkokį tekstą Main metode. 
+                - Metodas grąžina žodžius Taip arba Ne ar tekste rado žodį 'mokausi'. 
+                    Bet tik tuo atveju jei žodis 'mokausi' nesulipęs su kitu žodžiu.
+                    N.B. grąžinama string, o ne bool.
+                -  Išvesti rezultatą Main metode.
+                Pvz: 
+                > Iveskite teksta:
+                _ ' as labai mokausi programuoti     '
+                > Ar yra mokausi: Taip
+
+ 
+
+                Pvz2: 
+                > Iveskite teksta:
+                _ 'aslabaimokausiprogramuoti'
+                > Ar yra mokausi: Ne
+
+ 
+
+                Pvz3: 
+                > Iveskite teksta:
+                _ 'mokausi programuoti labai    '
+                > Ar yra mokausi: Taip  
+        
+                Pvz4: 
+                > Iveskite teksta:
+                _ 'as mokausi, labai stipriai'
+                > Ar yra mokausi: Taip
+                Pvz5: 
+                > Iveskite teksta:
+                _ 'as mokausi!'
+                > Ar yra mokausi: Taip
+                Pvz6: 
+                > Iveskite teksta:
+                _ 'as mokausi?'
+                > Ar yra mokausi: Taip
+                Pvz7: 
+                > Iveskite teksta:
+                _ 'as studijuoju (mokausi)'
+                > Ar yra mokausi: Taip
+                Pvz8: 
+                > Iveskite teksta:
+                _ 'as studijuojumokausi)'
+                > Ar yra mokausi: Ne*/
+
+            Console.WriteLine("Iveskite bet koki teksta"); 
+            string textas = Console.ReadLine();
+            
+            Console.WriteLine(arYraZodisMokausi(textas));
+
+        }
+
 
 
         //---------------------UZDUOCIU METODAI---------------------
@@ -140,6 +200,22 @@
             patrimintas = text.TrimStart();
             ilgisBeTarpu = patrimintas.Length;
             return ilgisSuTarpais - ilgisBeTarpu ;
+        }
+
+        //NAMU DARBAS
+        public static string arYraZodisMokausi(string tekstas)
+        {
+            string result;
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+            if(Regex.IsMatch(tekstas , @"\bmokausi\b"))
+            {
+                return "Tiesa";
+            }
+            else
+            {
+                return "Netiesa";
+            }
+            
         }
 
 
