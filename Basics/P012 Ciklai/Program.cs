@@ -6,7 +6,7 @@ namespace P012_Ciklai
     {
         static void Main(string[] args)
         {
-            uzduotis7DidejanciuSkaiciuPiramide();
+            uzduotis9DaugybosLentele();
         }
 
         //----------------UZDUOTYS------------------
@@ -234,7 +234,93 @@ namespace P012_Ciklai
 
         }
 
+        public static void uzduotis8SkaiciuEile()
+        {
+            Console.WriteLine("Koki skaiciu noretumete atvaizduoti?");
+            int skaicius = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Kiek kartu noretumete atvaizduoti?");
+            int kartai = Convert.ToInt32(Console.ReadLine());
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= kartai; i++)
+            {
+                sb.Append("-> ");
+                for(int j = 0; j < i; j++)
+                {
+                    sb.Append(skaicius);
+                }
+            }
+            Console.WriteLine(sb);
+        }
+
+        public static void uzduotis9DaugybosLentele()
+        {
+            Console.WriteLine("Iveskite skaiciu");
+            int skaicius = Convert.ToInt32(Console.ReadLine());
+            var sb = new StringBuilder();
+
+            for (int i = 1; i <= 10; i++)
+            {
+                sb.Append(skaicius).Append(" X ").Append(i).Append(" = ").Append(skaicius * i);
+                Console.WriteLine(sb);
+                sb.Clear();
+            }
+        }
 
 
+        //============================SKAICIUOTUVAS============================
+
+/*        static void skaiciuotuvasMain()
+        {
+            bool pereitiPrieSubMeniu = false;
+            int pasirinkimas;
+            while (true)
+            {
+                while (!pereitiPrieSubMeniu)
+                {
+                    Console.WriteLine("1) Nauja operacija");
+                    Console.WriteLine("2) Testi su rezultatu");
+                    Console.WriteLine("3) Iseiti");
+                    pasirinkimas = Convert.ToInt32(Console.ReadLine());
+                    skaiciuotuvoMeniu(pasirinkimas);
+                }
+            }
+        }
+
+        public static void skaiciuotuvoMeniu(int pasirinkimas)
+        {
+            switch (pasirinkimas)
+            {
+                case 1:
+                    skaiciuotuvoSubMeniu();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+*//*        public static void skaiciuotuvoSubMeniu()
+        {
+            int pasirinkimas;
+            Console.WriteLine("1) Sudetis");
+            Console.WriteLine("2) Atimtis");
+            Console.WriteLine("3) Daugyba");
+            Console.WriteLine("4) Dalyba");
+            pasirinkimas = Convert.ToInt32(Console.ReadLine());
+            switch (pasirinkimas)
+            {
+                case 1:
+                    sudetis();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+       *//* public static double sudetis()
+        {
+            Console.WriteLine("Iveskite du skaicius");
+
+        }*/
     }
 }
