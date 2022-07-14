@@ -6,7 +6,7 @@ namespace P012_Ciklai
     {
         static void Main(string[] args)
         {
-            uzduotis9DaugybosLentele();
+            skaiciuotuvasMain();
         }
 
         //----------------UZDUOTYS------------------
@@ -270,10 +270,12 @@ namespace P012_Ciklai
 
         //============================SKAICIUOTUVAS============================
 
-/*        static void skaiciuotuvasMain()
+        static void skaiciuotuvasMain()
         {
             bool pereitiPrieSubMeniu = false;
+            bool arTestiSuRezultatu = false;
             int pasirinkimas;
+            double? rezultatas = null;
             while (true)
             {
                 while (!pereitiPrieSubMeniu)
@@ -282,24 +284,40 @@ namespace P012_Ciklai
                     Console.WriteLine("2) Testi su rezultatu");
                     Console.WriteLine("3) Iseiti");
                     pasirinkimas = Convert.ToInt32(Console.ReadLine());
-                    skaiciuotuvoMeniu(pasirinkimas);
+                    skaiciuotuvoMeniu(pasirinkimas, ref rezultatas, ref arTestiSuRezultatu);
+                    Console.WriteLine(rezultatas == null ? "" : rezultatas);
                 }
             }
         }
 
-        public static void skaiciuotuvoMeniu(int pasirinkimas)
+        public static void skaiciuotuvoMeniu(int pasirinkimas, ref double? rezultatas, ref bool arTestiSuRezultatu)
         {
             switch (pasirinkimas)
             {
                 case 1:
-                    skaiciuotuvoSubMeniu();
+                    skaiciuotuvoSubMeniu(ref rezultatas, ref arTestiSuRezultatu);
+                    break;
+                case 2:
+                    if(rezultatas == null)
+                    {
+                        Console.WriteLine("Rezultato nera, pirma atlikite operacija");
+                        break;
+                    }
+                    else
+                    {
+                        arTestiSuRezultatu = true;
+                        skaiciuotuvoSubMeniu(ref rezultatas, ref arTestiSuRezultatu);
+                    }
+                    break;
+                case 3:
+                    Environment.Exit(0);
                     break;
                 default:
                     break;
             }
         }
 
-*//*        public static void skaiciuotuvoSubMeniu()
+        public static void skaiciuotuvoSubMeniu(ref double? rezultatas, ref bool arTestiSuRezultatu)
         {
             int pasirinkimas;
             Console.WriteLine("1) Sudetis");
@@ -310,17 +328,158 @@ namespace P012_Ciklai
             switch (pasirinkimas)
             {
                 case 1:
-                    sudetis();
+                    rezultatas = sudetis(ref rezultatas, ref arTestiSuRezultatu);
+                    break;
+                case 2:
+                    rezultatas = atimtis(ref rezultatas, ref arTestiSuRezultatu);
+                    break;
+                case 3:
+                    rezultatas = daugyba(ref rezultatas, ref arTestiSuRezultatu);
+                    break;
+                case 4:
+                    rezultatas = dalyba(ref rezultatas, ref arTestiSuRezultatu);
                     break;
                 default:
                     break;
             }
         }
 
-       *//* public static double sudetis()
+        public static double? sudetis(ref double? rezultatas, ref bool arTestiSuRezultatu)
         {
-            Console.WriteLine("Iveskite du skaicius");
+            double pirmas;
+            double antras;
+            if (arTestiSuRezultatu)
+            {
+                Console.WriteLine("Iveskite viena skaiciu:");
+                antras = Convert.ToDouble(Console.ReadLine());
+                pirmas = Convert.ToDouble(rezultatas);
+                if (!arValidu(pirmas, antras, "sudetis"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas + antras;
+            }
+            else
+            {
+                Console.WriteLine("Iveskite du skaicius");
+                pirmas = Convert.ToDouble(Console.ReadLine());
+                antras = Convert.ToDouble(Console.ReadLine());
+                if (!arValidu(pirmas, antras, "sudetis"))
+                {
+                    return null;
+                }
+                return pirmas + antras;
+            }
 
-        }*/
+        }
+
+        public static double? atimtis(ref double? rezultatas, ref bool arTestiSuRezultatu)
+        {
+            double pirmas;
+            double antras;
+            if (arTestiSuRezultatu)
+            {
+                Console.WriteLine("Iveskite viena skaiciu:");
+                antras = Convert.ToDouble(Console.ReadLine());
+                pirmas = Convert.ToDouble(rezultatas);
+                if (!arValidu(pirmas, antras, "atimtis"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas - antras;
+            }
+            else
+            {
+                Console.WriteLine("Iveskite du skaicius");
+                pirmas = Convert.ToDouble(Console.ReadLine());
+                antras = Convert.ToDouble(Console.ReadLine());
+                if (!arValidu(pirmas, antras, "atimtis"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas - antras;
+            }
+            
+
+        }
+
+        public static double? daugyba(ref double? rezultatas, ref bool arTestiSuRezultatu)
+        {
+            double pirmas;
+            double antras;
+            if (arTestiSuRezultatu)
+            {
+                Console.WriteLine("Iveskite viena skaiciu:");
+                antras = Convert.ToDouble(Console.ReadLine());
+                pirmas = Convert.ToDouble(rezultatas);
+                if (!arValidu(pirmas, antras, "sudetis"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas * antras;
+            }
+            else
+            {
+                Console.WriteLine("Iveskite du skaicius");
+                pirmas = Convert.ToDouble(Console.ReadLine());
+                antras = Convert.ToDouble(Console.ReadLine());
+                if (!arValidu(pirmas, antras, "sudetis"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas * antras;
+            }
+
+        }
+
+        public static double? dalyba(ref double? rezultatas, ref bool arTestiSuRezultatu)
+        {
+            double pirmas;
+            double antras;
+            if (arTestiSuRezultatu)
+            {
+                Console.WriteLine("Iveskite viena skaiciu:");
+                antras = Convert.ToDouble(Console.ReadLine());
+                pirmas = Convert.ToDouble(rezultatas);
+                if (!arValidu(pirmas, antras, "dalyba"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas / antras;
+            }
+            else
+            {
+                Console.WriteLine("Iveskite du skaicius");
+                pirmas = Convert.ToDouble(Console.ReadLine());
+                antras = Convert.ToDouble(Console.ReadLine());
+                if (!arValidu(pirmas, antras, "dalyba"))
+                {
+                    Console.WriteLine("Ivesti skaiciai nera validus");
+                    return null;
+                }
+                return pirmas / antras;
+            }
+
+        }
+
+        public static bool arValidu(double pirmas, double antras, string operacija)
+        {
+            if(!double.TryParse(Convert.ToString(pirmas), out _) || !double.TryParse(Convert.ToString(antras), out _))
+            {
+                return false;
+            }
+            else if (operacija == "dalyba" && antras == 0)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
     }
 }
