@@ -28,6 +28,8 @@
             //statines klases enumeracijos - siek tiek geriau, nes programa tampa labiau modifikuojama ir gali plestis
 
             int today3 = DayOfWeekEnum.Tuesday; // toks pat panaudojimas kaip enum, tik cia yra static klase - atsiranda galimybe siek tiek praplesti funkcionaluma, o sintakse visiskai nesikeicia
+            //testinu repo
+        
         }
     }
 }
