@@ -4,6 +4,60 @@
     {
         static void Main(string[] args)
         {
+            Uzduotis2();
+        }
+
+        //1 Uzduotis
+        private static void Uzduotis1()
+        {
+            /*Sukurkite enum EGenderType su reikšmėmis 0 - MALE, 1 - FEMALE*/
+        }
+        internal enum EGenderType { Male, Female }
+
+        //2 Uzduotis
+        private static void Uzduotis2()
+        {
+            /*Sukurkite klasę Person su properčiais:
+            -Id(int), 
+            -FirstName(string), 
+            -LastName(string), 
+            -FullName(readonly string -generuojamas iš FirstName ir LastName)
+            -Gender(int - užpildomas tik inicializuojant klasę reikšme arba per metodą iš enumo EGenderType)
+            - BirthDate(DateTime - gali būtu null)
+            - Height(Decimal)
+            - Weight(Decimal)
+            - Age(readonly int -gali būti null.Generuojamas iš gimimo datos(BirthDate).Generavimui naudoti metodą) 
+            -NameChanges(string - įrašomas tik iš vidaus.Pildomas pakeitus FirstName arba LastName.
+              Saugomi visi pakeitimai csv formatu "senas,naujas")*/
+
+
+        }
+        public class Person 
+        { 
+            public int Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string FullName { get { return FirstName + " " + LastName; } }
+            public string Gender { get; private set; }
+            public DateTime? BirthDate { get; set; }
+            public decimal Height { get; set; }
+            public decimal Weight { get; set; }
+            public int? Age { get { return GenerateAge(); } }
+
+
+            private int GenerateAge()
+            {
+                return DateTime.Now.Year - BirthDate.Value.Year;
+            }
+        }
+
+
+
+
+
+
+        private static void EnumsTeorija()
+        {
             Console.WriteLine("Hello, Enums!\n");
             int sunday = 1;
             int monday = 2;
@@ -28,8 +82,6 @@
             //statines klases enumeracijos - siek tiek geriau, nes programa tampa labiau modifikuojama ir gali plestis
 
             int today3 = DayOfWeekEnum.Tuesday; // toks pat panaudojimas kaip enum, tik cia yra static klase - atsiranda galimybe siek tiek praplesti funkcionaluma, o sintakse visiskai nesikeicia
-            
-        
         }
     }
 }
