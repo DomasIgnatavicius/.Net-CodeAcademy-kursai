@@ -28,28 +28,32 @@
             - Weight(Decimal)
             - Age(readonly int -gali būti null.Generuojamas iš gimimo datos(BirthDate).Generavimui naudoti metodą) 
             -NameChanges(string - įrašomas tik iš vidaus.Pildomas pakeitus FirstName arba LastName.
-              Saugomi visi pakeitimai csv formatu "senas,naujas")*/
+              Saugomi visi pakeitimai csv formatu "senas,naujas")
+            */
+
+            //---------Enumerations.Domain.Models => Person
 
 
         }
-        public class Person 
-        { 
-            public int Id { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string FullName { get { return FirstName + " " + LastName; } }
-            public string Gender { get; private set; }
-            public DateTime? BirthDate { get; set; }
-            public decimal Height { get; set; }
-            public decimal Weight { get; set; }
-            public int? Age { get { return GenerateAge(); } }
 
-
-            private int GenerateAge()
-            {
-                return DateTime.Now.Year - BirthDate.Value.Year;
-            }
+        //3 Uzduotis
+        private static void Uzduotis3()
+        {
+            /*Sukurkite klasę Society
+         1 - Sukurkite propertį People(List of persons)
+         2 - sukurkite metodą FillPeople kuris užpildys sąrašą iš klasės PersonInitialData.
+         3 - Sukurkite propertį OldPeople. Grąžinkite visus asmenis kurie gimė prieš 2001m. (unit - test)
+         4 - Sukurkite properčius Men ir Women. 
+         5 - Sukurkite metodus FillMen ir FillWomen, kurie iš PersonInitialData surašys vyrus ir moteris(unit-test) 
+         6 - sukurkite metodą SortByAge(), kuris Men ir Women sąrašus esančius asmenis surikiuotu pagal amžių nuo jauniausio iki vyriausio.
+         7 - Padarykite metodą kuris People, Men ir Women properčiuose esančius asmenis  rikiuos nuo A iki Z arba nuo Z iki A. 
+            Pagal Vardą arba Pavardę
+              tokiu principu: SortByFirstName().Asc()
+                              SortByLastName().Asc()
+                              SortByLastName().Desc()
+            < hint > return this*/
         }
+
 
 
 
