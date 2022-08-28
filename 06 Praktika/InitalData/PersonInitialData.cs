@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _04_Enumerations.Domain.Models;
-using _04_Enumerations.Domain.Enums;
+﻿using P034_Praktika.Enums;
+using P038_Praktika.Models;
 
-namespace _04_Enumerations.Domain.InitalData
+namespace P034_Praktika.InitalData
 {
-    public class PersonInitalData
+    public static class PersonInitialData
     {
         public static readonly Person[] DataSeed =
        {

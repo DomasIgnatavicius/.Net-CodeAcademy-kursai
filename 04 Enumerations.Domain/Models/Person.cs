@@ -13,7 +13,7 @@ namespace _04_Enumerations.Domain.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName { get { return FirstName + " " + LastName; } }
-        public EGenderType Gender { get; private set; }
+        public EGenderType Gender { get;  set; }
         public DateTime? BirthDate { get; set; }
         public decimal Height { get; set; }
         public decimal Weight { get; set; }

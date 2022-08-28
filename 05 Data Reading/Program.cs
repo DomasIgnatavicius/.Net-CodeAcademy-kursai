@@ -1,13 +1,17 @@
 ﻿using _05_Data_Reading.Domain.Models;
 using _04_Enumerations.Domain.Models;
 using _05_Data_Reading.InitialData;
+using System.IO;
+using _05_Data_Reading.Domain.Services;
+
 namespace _05_Data_Reading
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //SkaitymasIsTxtFailoAtskiraiSuUsing();
+            FileService fileService = new FileService(Environment.CurrentDirectory + "\\InitialData\\AnimalData.txt");
         }
 
         static void SakninioFolderioSuradimas(string path)
@@ -72,6 +76,131 @@ namespace _05_Data_Reading
             foreach (Person person in people)
             {
                 Console.WriteLine($"Vardas Pavarde: {person.FirstName} {person.LastName}");
+            }
+        }
+
+
+
+
+
+        // + Greitas sprendimas reikalaujantis nedaug laiko ir mazai ziniu
+        // - Reikalauja papildomu split operaciju
+        // - Uzloadina visa teksta i aktyvia atminti
+        // - Kol skaito teksta nieko kito aplikacijoje negali vykti su veikianciu threadu
+        // - Nesiples darbas su dideliais failais
+        public static void SkaitymasIsTxtFailo()
+        {
+            int animalColumnCount = 2;
+            List<Animals> animals = new List<Animals>();
+            //string filePath = "C:\\Users\\Edvinas\\source\\repos\\CA.NET2\\OOP\\P035_DataReading\\P035_DataReading\\InitialData\\AnimalData.txt";
+            string filePath = Environment.CurrentDirectory + "\\InitialData\\AnimalData.txt";
+            Console.WriteLine(filePath);
+            string text = File.ReadAllText(filePath);
+            string[] animalStringData = text.Split(Environment.NewLine);
+
+            Console.WriteLine(text);
+
+            foreach (string animal in animalStringData)
+            {
+                string[] animalData = animal.Split(',');
+
+                if (animalData.Length != animalColumnCount) break;
+
+                Animals newAnimal = new Animals(animalData);
+                animals.Add(newAnimal);
+            }
+
+            foreach (Animals animal in animals)
+            {
+                Console.WriteLine(animal.Name);
+            }
+        }
+
+        // + Greitas sprendimas reikalaujantis nedaug laiko ir mazai ziniu
+        // - Uzloadina visa teksta i aktyvia atminti
+        // - Kol skaito teksta nieko kito aplikacijoje negali vykti su veikianciu threadu
+        // - Nesiples darbas su dideliais failais
+        public static void SkaitymasIsTxtFailoEilutemis()
+        {
+            int animalColumnCount = 2;
+            List<Animals> animals = new List<Animals>();
+            string filePath = Environment.CurrentDirectory + "\\InitialData\\AnimalData.txt";
+
+            string[] animalStringData = File.ReadAllLines(filePath);
+
+            foreach (string animal in animalStringData)
+            {
+                string[] animalData = animal.Split(',');
+
+                if (animalData.Length != animalColumnCount) break;
+
+                Animals newAnimal = new Animals(animalData);
+                animals.Add(newAnimal);
+            }
+
+            foreach (Animals animal in animals)
+            {
+                Console.WriteLine(animal.Name);
+            }
+        }
+
+
+        public static void SkaitymasIsTxtFailoEilutemisAtskirai()
+        {
+            int animalColumnCount = 2;
+            List<Animals> animals = new List<Animals>();
+            string filePath = Environment.CurrentDirectory + "\\InitialData\\AnimalData.txt";
+
+            // IDisposable resursai butu elementai kaip: Streamai, Listeneriai, duombazes komunikacijos repositorijos, webiniai iskvietimai ir t.t.
+            StreamReader sr = new StreamReader(filePath);
+
+            string animalLine;
+            //Console.WriteLine(line);
+            //string line2 = sr.ReadLine();
+            //Console.WriteLine(line2);
+
+            while ((animalLine = sr.ReadLine()) != null)
+            {
+                string[] animalData = animalLine.Split(',');
+
+                if (animalData.Length != animalColumnCount) break;
+
+                Animals newAnimal = new Animals(animalData);
+                animals.Add(newAnimal);
+            }
+
+            // Su .Close() mes pasakome GarbageCollector, kad reikia isvalyti duomenis priklausancius siam objektui
+            sr.Close();
+
+            foreach (Animals animal in animals)
+            {
+                Console.WriteLine(animal.Name);
+            }
+        }
+
+        public static void SkaitymasIsTxtFailoAtskiraiSuUsing()
+        {
+            int animalColumnCount = 2;
+            List<Animals> animals = new List<Animals>();
+            string filePath = Environment.CurrentDirectory + "\\InitialData\\AnimalData.txt";
+
+            using StreamReader sr = new StreamReader(filePath);
+
+            string animalLine;
+
+            while ((animalLine = sr.ReadLine()) != null)
+            {
+                string[] animalData = animalLine.Split(',');
+
+                if (animalData.Length != animalColumnCount) break;
+
+                Animals newAnimal = new Animals(animalData);
+                animals.Add(newAnimal);
+            }
+
+            foreach (Animals animal in animals)
+            {
+                Console.WriteLine(animal.Name);
             }
         }
     }

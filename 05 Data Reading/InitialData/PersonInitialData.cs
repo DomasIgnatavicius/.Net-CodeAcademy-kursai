@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _04_Enumerations.Domain.Models;
+using _04_Enumerations.Domain.Enums;
 
 namespace _05_Data_Reading.InitialData
 {

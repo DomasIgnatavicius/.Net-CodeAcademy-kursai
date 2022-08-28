@@ -13,4 +13,10 @@
     <ProjectReference Include="..\05 Data Reading.Domain\05 Data Reading.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="InitialData\AnimalData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
