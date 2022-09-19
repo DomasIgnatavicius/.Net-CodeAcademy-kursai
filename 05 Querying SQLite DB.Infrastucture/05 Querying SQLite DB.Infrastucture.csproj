@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\05 Querying SQLite DB.Domain\05 Querying SQLite DB.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
