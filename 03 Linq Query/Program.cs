@@ -2,7 +2,7 @@
 
 namespace _03_Linq_Query
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -213,10 +213,79 @@ namespace _03_Linq_Query
             }
             Console.WriteLine("-------------------------------------------------------------------");
 
+            Console.WriteLine("UZDUOTYS");
+            Console.WriteLine();
+
+            Console.WriteLine("Pirma: uzklausa, kuri is masyvo grazina lyginius sk");
+            pirmaUzduotis();
+            Console.WriteLine("Antra: uzklausa, kuri is masyvo grazina teigiamus sk");
+            antraUzduotis();
+            Console.WriteLine("Trecia: uzklausa, kuri is masyvo grazina skaiciu kvadrata");
+            treciaUzduotis();
+            Console.WriteLine("Ketvirta: uzklausa, kuri is masyvo grazina skaiciaus pasikartojimu kieki");
+            treciaUzduotis();
+
+        }
+
+        public static int[] pirmaUzduotis()
+        {
+            int[] skaiciai = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            var lyginiai = (from s in skaiciai
+                           where s % 2 == 0
+                           select s).ToArray();
+
+            foreach (var s in lyginiai)
+            {
+                Console.WriteLine(s);
+            }
+            return lyginiai;
+        }
+
+        public static int[] antraUzduotis()
+        {
+            int[] skaiciai = new int[] { 1,3,-2,-4,-7,-3,-8,12,19,6,9,10,14 };
+
+            var neigiami = (from s in skaiciai
+                            where s < 0
+                            select s).ToArray();
+
+            foreach (var s in neigiami)
+            {
+                Console.WriteLine(s);
+            }
+            return neigiami;
+        }
+        public static int[] treciaUzduotis()
+        {
+            int[] skaiciai = new int[] {3,9,2,8,6,5};
+
+            var skaiciuasKvadratas = (from s in skaiciai
+                            select s*s).ToArray();
+
+            foreach (var s in skaiciuasKvadratas)
+            {
+                Console.WriteLine(s);
+            }
+            return skaiciuasKvadratas;
+        }
+        public static int[] ketvirtaUzduotis()
+        {
+            int[] skaiciai = new int[] {3,9,2,8,6,5,5,9,1,2,3,7,5,6,7,3,7,6,8,5,4,9,6,2};
+
+            var pasikartojimuKiekis = (from s in skaiciai
+                                      where s < 0
+                                      select s * s).ToArray();
+
+            foreach (var s in pasikartojimuKiekis)
+            {
+                Console.WriteLine(s);
+            }
+            return pasikartojimuKiekis;
         }
 
 
-    
-        
+
+
     }
 }
