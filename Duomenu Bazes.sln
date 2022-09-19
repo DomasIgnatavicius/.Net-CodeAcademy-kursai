@@ -11,15 +11,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 LINQ_Extension.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 LINQ_Extensions_Tests", "P049_LINQ_Extensions_Tests\02 LINQ_Extensions_Tests.csproj", "{FFE50C14-E52A-49DF-BC22-8CB162A98023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Linq Query", "03 Linq Query\03 Linq Query.csproj", "{FCC83170-972F-46C4-A834-63E442ACAD17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Linq Query", "03 Linq Query\03 Linq Query.csproj", "{FCC83170-972F-46C4-A834-63E442ACAD17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Linq QueryTests", "03 Linq QueryTests\03 Linq QueryTests.csproj", "{1216B4C8-51CE-4F93-B07C-CF2B26CE69F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Linq QueryTests", "03 Linq QueryTests\03 Linq QueryTests.csproj", "{1216B4C8-51CE-4F93-B07C-CF2B26CE69F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 First SQL DB", "04 First SQL DB\04 First SQL DB.csproj", "{B433BAAD-31AB-4767-B14D-882B10D3F62F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 First SQL DB", "04 First SQL DB\04 First SQL DB.csproj", "{B433BAAD-31AB-4767-B14D-882B10D3F62F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 First SQL DB.Domain", "04 First SQL DB.Domain\04 First SQL DB.Domain.csproj", "{7EFEC23C-9C0B-41B7-9397-20B9511ADBE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 First SQL DB.Domain", "04 First SQL DB.Domain\04 First SQL DB.Domain.csproj", "{7EFEC23C-9C0B-41B7-9397-20B9511ADBE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 First SQL DB.services", "04 First SQL DB.services\04 First SQL DB.services.csproj", "{00E7C842-4447-473A-AC82-A702DA629C47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 First SQL DB.services", "04 First SQL DB.services\04 First SQL DB.services.csproj", "{00E7C842-4447-473A-AC82-A702DA629C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Querying SQLite DB", "05 Querying SQLite DB\05 Querying SQLite DB.csproj", "{0EBE6AD9-9F59-4C9B-A850-C84A178241E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Querying SQLite DB.Domain", "05 Querying SQLite DB.Domain\05 Querying SQLite DB.Domain.csproj", "{94A15847-A195-4244-B792-C96411C89F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Querying SQLite DB.Infrastucture", "05 Querying SQLite DB.Infrastucture\05 Querying SQLite DB.Infrastucture.csproj", "{C73FFEDE-F559-45E5-82A8-0D1346736353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{00E7C842-4447-473A-AC82-A702DA629C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00E7C842-4447-473A-AC82-A702DA629C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00E7C842-4447-473A-AC82-A702DA629C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EBE6AD9-9F59-4C9B-A850-C84A178241E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EBE6AD9-9F59-4C9B-A850-C84A178241E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EBE6AD9-9F59-4C9B-A850-C84A178241E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EBE6AD9-9F59-4C9B-A850-C84A178241E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94A15847-A195-4244-B792-C96411C89F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A15847-A195-4244-B792-C96411C89F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A15847-A195-4244-B792-C96411C89F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A15847-A195-4244-B792-C96411C89F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73FFEDE-F559-45E5-82A8-0D1346736353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73FFEDE-F559-45E5-82A8-0D1346736353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73FFEDE-F559-45E5-82A8-0D1346736353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73FFEDE-F559-45E5-82A8-0D1346736353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
